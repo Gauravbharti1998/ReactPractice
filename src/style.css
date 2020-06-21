@@ -1,5 +1,4 @@
 body{
-    overflow: hidden;
     font-size: 50px;
     font-family: consolas;
 }
@@ -14,4 +13,4 @@ body{
     display: inline-block;
     font-size: 16px;
     margin-left:2px;
-  }
+}

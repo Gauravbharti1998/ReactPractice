@@ -1,5 +1,4 @@
 import React from 'react'
-
 class Main extends React.Component{
     constructor(){
         super()
@@ -10,9 +9,6 @@ class Main extends React.Component{
         this.increment=this.increment.bind(this)
         this.decrement=this.decrement.bind(this)
         this.reset = this.reset.bind(this)
-    }
-    reset(){
-        this.setState({color: 'black'})
     }
     increment()
     {
@@ -31,19 +27,22 @@ class Main extends React.Component{
         }
         setTimeout(this.reset,2000)
     }
+    reset(){
+        this.setState({color: 'black'})
+    }
     render()
-    {   const style={
-            textAlign: 'center',
-            marginTop: '30vh',
-            color: this.state.color,
-            transition: 'color 0.5s'
-        }
-        return <div style = {style}>
+    {   
+        const style={
+             textAlign: 'center',
+             color: this.state.color,
+             transition: 'color 0.5s'
+         }
+        return(<div style = {style}>        
             <h1>{this.state.counter}</h1>
             <button className='button' onClick={this.increment}>+</button>
             <button className='button' onClick={this.decrement}>-</button>
         </div>
-    }
+    )}
 
 }
 

@@ -8,15 +8,13 @@ class Footer extends React.Component{
     }
     componentDidMount(){
         setInterval(this.updateTime, "1000")
-    }
+    } 
     updateTime(){
         this.setState({time: new Date()})
     }
     render(){
-        const style={
-        }
         return(
-            <div style={style}>
+            <div>
                 <h3>{this.state.time.getHours().toString().padStart(2,'0')}:{this.state.time.getMinutes().toString().padStart(2,'0')}:{this.state.time.getSeconds().toString().padStart(2,'0')}</h3>
                 
             </div>
